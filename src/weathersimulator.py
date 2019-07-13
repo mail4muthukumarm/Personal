@@ -5,9 +5,12 @@ from points import Points
 
 if __name__ == "__main__":
     points = Points("input.txt")
-    points.read()
-    for point in points:
-        print(point)
+    try:
+        points.read()
+        for point in points:
+            print(point)
+    except Exception as e:
+        print(e.message)
 
 
 

@@ -18,7 +18,7 @@ def compute_altitude(lat, long):
         else:
             return "", result_json["statusCode"], result_json['errorDetails']
     except Exception as e:
-        print(e.message)
+        raise e
 
 
 '''
@@ -33,4 +33,4 @@ def compute_timezone(lat, long):
         else:
             return ""
     except Exception as e:
-        print(e.message)
+        raise e

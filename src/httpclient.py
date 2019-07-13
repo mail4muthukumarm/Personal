@@ -13,7 +13,7 @@ class HttpClient:
                                                 'key=Av0tRD9CWVpc7FTrPaewewnZ-hwgwPbTAnHZ3c6rod2tltVgthQ682NvjsV__xJC')
             return result
         except Exception as e:
-            print(e.message)
+            raise e
 
     @staticmethod
     def get_resource(resource, payload):
@@ -22,4 +22,4 @@ class HttpClient:
                                                 'key=Av0tRD9CWVpc7FTrPaewewnZ-hwgwPbTAnHZ3c6rod2tltVgthQ682NvjsV__xJC')
             return result
         except Exception as e:
-            print(e.message)
+            raise e

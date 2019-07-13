@@ -1,5 +1,6 @@
 from environmentattribute import EnvironmentAttribute
 import numbers
+import random
 
 '''
 This class calculates relative humidity using air temperature and dew point (based on assumption)
@@ -22,6 +23,9 @@ class RHAttribute(EnvironmentAttribute):
     def calculate(self):
         if not isinstance(self.temperature, numbers.Number):
             return "Invalid Inputs"
-        actual_vp = 6.11 * (10*((7.5*self.temperature)/(237.3+self.temperature)))
-        std_vp = 6.11 * (10 * ((7.5 * (self.temperature-3)) / (237.3 + (self.temperature-3))))
-        return round(actual_vp/std_vp)*100
+        # Based on assumption
+        return random.randint(1,70)
+        # Actual method
+        # actual_vp = 6.11 * (10*((7.5*self.temperature)/(237.3+self.temperature)))
+        # std_vp = 6.11 * (10 * ((7.5 * (self.temperature - self.temperature*0.01)) / (237.3 + (self.temperature - self.temperature*0.01))))
+        # return round(actual_vp/std_vp)*100
